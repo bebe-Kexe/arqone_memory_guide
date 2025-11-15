@@ -11,19 +11,12 @@ This guide explains how to allocate more RAM to Minecraft modpacks on both **Mod
 
 ---
 
-## Why Allocate More RAM?
-
-Minecraft modpacks, especially larger ones, require more memory than vanilla Minecraft. Without enough RAM:
-- The game may crash frequently
-- You may experience stuttering and low FPS
-- Chunk loading can be slow
-- Server/world loading may take longer
-
----
-
 ## How Much RAM Should I Allocate?
 
 The amount of RAM you should allocate depends on the modpack size and your system's total RAM:
+
+> [!IMPORTANT]
+> For Arqone Frostline modpack: Please allocate at least <ins>7GB of RAM</ins>. Recommended amount is <ins>12GB of RAM</ins>. **Check general RAM allocation below and proceed accordingly.**
 
 | Modpack Size | Recommended RAM | Your System RAM Required |
 |--------------|----------------|--------------------------|
@@ -32,7 +25,8 @@ The amount of RAM you should allocate depends on the modpack size and your syste
 | Heavy (100-200 mods) | 6-8 GB | At least 12 GB |
 | Very Heavy (200+ mods) | 8-12 GB | At least 16 GB |
 
-**Important:** Never allocate all your system RAM to Minecraft! Leave at least 2-4 GB for your operating system and other applications.
+> [!NOTE]
+>  Never allocate all your system RAM to Minecraft! Leave at least 2-4 GB for your operating system and other applications.
 
 ---
 
@@ -45,39 +39,32 @@ The amount of RAM you should allocate depends on the modpack size and your syste
 
 2. **Navigate to Your Profile**
    - Find the modpack you want to configure in your list of installed profiles
+   - - <img width="234" height="831" alt="image" src="https://github.com/user-attachments/assets/a34ea577-5afe-4de2-a738-7ad20005c68f" />
    - Click on the profile to select it
+   
+
 
 3. **Access Profile Settings**
-   - Click the **three dots** (⋯) or **gear icon** next to your profile name
-   - Select **"Edit"** or **"Profile Settings"** from the dropdown menu
-
+   - Click the **cogwheel** (⚙️) next to the play button
+   - - <img width="400" height="292" alt="image" src="https://github.com/user-attachments/assets/dadd6fe0-89a7-4f56-8b20-98c1419a5465" />
 4. **Find Memory Settings**
-   - Look for the **"Java"** or **"Memory"** section
+   - Look for the **"Java and memory"** section
+   - - <img width="400" height="624" alt="image" src="https://github.com/user-attachments/assets/6fa4d924-0694-45a3-a39c-f6b508e30fc5" />
    - You should see options for memory allocation
 
 5. **Adjust Memory Allocation**
-   - Find the **"Maximum Memory"** or **"RAM"** slider/field
+   - Find the **"Custom memory allocation"** and make sure you have that option **"checked"**
+   - - <img width="400" height="621" alt="image" src="https://github.com/user-attachments/assets/78a615f2-1e5d-4b68-9f41-5d23194764ca" />
    - Set your desired amount (e.g., 4096 MB = 4 GB, 6144 MB = 6 GB, 8192 MB = 8 GB)
    - Some launchers show it in GB, others in MB (1 GB = 1024 MB)
 
-6. **Save Settings**
+7. **Save Settings**
    - Click **"Save"** or **"Done"** to apply your changes
+   - If there isnt any option to save your changes, then the launcher saved them automatically.
 
-7. **Launch Your Modpack**
+8. **Launch Your Modpack**
    - Start the modpack and check if performance has improved
 
-### Alternative Method (JVM Arguments):
-
-If you prefer manual configuration:
-1. In the profile settings, find **"JVM Arguments"** or **"Advanced Settings"**
-2. Look for the argument `-Xmx` (this controls maximum memory)
-3. Modify it to your desired value: `-Xmx6G` (for 6 GB) or `-Xmx8G` (for 8 GB)
-4. You can also set minimum memory with `-Xms` (e.g., `-Xms4G`)
-
-Example JVM arguments:
-```
--Xms4G -Xmx6G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC
-```
 
 ---
 
@@ -90,14 +77,17 @@ Example JVM arguments:
 
 2. **Access Settings**
    - Click on the **"Settings"** button (usually a gear icon) in the bottom right or top right corner
-   - Or click on the **"TL"** icon and select **"Settings"**
+   - - <img width="400" height="381" alt="image" src="https://github.com/user-attachments/assets/4f96d8bb-a56f-4cbe-892a-f9c00f9a8c8f" />
 
 3. **Navigate to Java Settings**
    - In the settings menu, look for the **"Java"** tab or section
+   - - <img width="400" height="683" alt="image" src="https://github.com/user-attachments/assets/478ea99d-266f-4622-a543-e88eca7ae5c7" />
    - You may also find it under **"Advanced Settings"**
 
 4. **Adjust Memory Allocation**
    - Find the **"RAM"** or **"Memory Allocation"** slider/dropdown
+   - - <img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/fe93aa33-729b-4eb5-887a-2ebfa7c60b8c" />
+
    - Select or enter your desired amount (e.g., 4096 MB, 6144 MB, 8192 MB)
    - TLauncher typically shows memory in MB:
      - 4 GB = 4096 MB
@@ -126,21 +116,24 @@ To set different RAM amounts for different modpacks:
 4. Set the RAM allocation specifically for that profile
 5. Save and launch
 
-### Using JVM Arguments (Advanced):
+---
 
-For more control:
-1. In TLauncher settings, find **"JVM Arguments"** section
-2. Enable **"Use custom JVM arguments"**
-3. Add or modify arguments:
-   ```
-   -Xms4G -Xmx8G -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
-   ```
-4. Adjust `-Xmx` value to your desired maximum RAM (e.g., `-Xmx8G` for 8 GB)
-5. Save and launch
+## Why Allocate More RAM?
+
+Minecraft modpacks, especially larger ones, require more memory than vanilla Minecraft. Without enough RAM:
+- The game may crash frequently
+- You may experience stuttering and low FPS
+- Chunk loading can be slow
+- Server/world loading may take longer
+
 
 ---
 
 ## Troubleshooting
+
+> [!TIP]
+> Fist of all, go to https://discord.com/invite/q7GQW9ASFN and create a "Technical problem" ticket.
+
 
 ### Game Won't Launch After Changing RAM:
 - **Reduce the RAM allocation** - You may have allocated more than your system can handle
@@ -174,12 +167,6 @@ For more control:
 3. **Optimize Settings:** Lower render distance and graphics settings if you're still experiencing issues
 4. **Update Mods:** Keep your modpack and mods updated for better performance and bug fixes
 5. **SSD Recommended:** Installing Minecraft on an SSD can significantly improve loading times
-
----
-
-## Contributing
-
-If you have suggestions or improvements for this guide, please feel free to contribute!
 
 ---
 
