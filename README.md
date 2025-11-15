@@ -132,7 +132,7 @@ Minecraft modpacks, especially larger ones, require more memory than vanilla Min
 ## Troubleshooting
 
 > [!TIP]
-> Fist of all, go to https://discord.com/invite/q7GQW9ASFN and create a "Technical problem" ticket.
+> Fist of all, go to [Arqone Discord](https://discord.com/invite/q7GQW9ASFN) and create a "Technical problem" ticket.
 
 
 ### Game Won't Launch After Changing RAM:
